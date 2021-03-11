@@ -1,12 +1,18 @@
 /* Серый цвет заголовка */
 $header_gray:#222222;
+/** Серый цвет подзаголовка */
+$header_light_gray:#9f9f9f;
+
 /** Розовый фон под мужиком */
 $promo_pink:#F1E4E6;
 /** Розовый текст */
 $pink_text:#f16d7f;
 
+/** Тёмно-серый цвет подвала */
+$footer_black:#222224;
+
 /** Google-шрифт Lato */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital;wght@300;400;900&display=swap');
 
 
 * {
@@ -38,6 +44,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 
     .main_menu_left_buttons {
       a {
@@ -48,6 +55,19 @@ body {
     .main_menu_right_buttons {
       a {
         margin-left: 33px;
+      }
+
+      .event_notification {
+        background: $pink_text;
+        border-radius: 50%;
+        color: white;
+        position: absolute;
+        top: 0;
+        right: -8px;
+        width: 16px;
+        height: 16px;
+        text-align: center;
+        font-size: 12px;
       }
     }
   }
@@ -64,6 +84,7 @@ body {
 
     img {
       width: 100%;
+      height: 100%;
     }
   }
 
@@ -87,6 +108,273 @@ body {
       .promo_colored {
         color: $pink_text;
       }
+    }
+  }
+}
+
+.news-block {
+  display: flex;
+  flex-direction: column;
+  margin-top: 65px;
+  gap: 30px;
+
+  .news {
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      font-size: 16px;
+      font-weight: 400;
+      color: white;
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 700;
+      color: $pink_text;
+    }
+  }
+
+  .news-row-1 {
+    display: flex;
+    gap: 30px;
+    height: 260px;
+
+    .news-1 {
+      background: url("../img/news-1.jpg") center center;
+    }
+
+    .news-2 {
+      background: url("../img/news-2.jpg") center center;
+    }
+
+    .news-3 {
+      background: url("../img/news-3.jpg") center center;
+    }
+  }
+
+  .news-row-2 {
+    height: 180px;
+    width: 100%;
+    background: url("../img/news-wide.jpg") center center;
+  }
+}
+
+.catalog-block {
+  margin-top: 96px;
+
+  font-weight: normal;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    color: $header_gray;
+    font-size: 30px;
+  }
+
+  h2 {
+    color: $header_light_gray;
+    font-size: 14px;
+  }
+
+  .catalog-cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 48px;
+    gap: 30px;
+
+    .catalog-card {
+      width: 360px;
+      height: 581px;
+      display: flex;
+      flex-direction: column;
+      background: #F8F8F8;
+
+      .catalog-image {
+        width: 100%;
+        height: 100%;
+      }
+
+      .catalog-header {
+        text-transform: uppercase;
+        font-size: 13px;
+        color: black;
+        margin-top: 25px;
+        margin-left: 18px;
+        margin-right: 18px;
+      }
+
+      .catalog-description {
+        font-size: 14px;
+        color: #5d5d5d;
+        margin-top: 12px;
+        margin-left: 18px;
+        margin-right: 18px;
+      }
+
+      .catalog-price {
+        color: $pink_text;
+        font-size: 16px;
+
+        margin: 18px 18px 20px;
+      }
+    }
+  }
+
+  .catalog-browse-all {
+    margin-top: 48px;
+    margin-bottom: 95px;
+
+    padding: 14px 38px;
+    color: $pink_text;
+    background: white;
+    border: 1px $pink_text solid;
+  }
+}
+
+.warranties {
+  background: $footer_black;
+  height: 340px;
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+  gap: 30px;
+  padding-top: 100px;
+
+  .warranty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    img {
+      height: 45px;
+      width: 100%;
+    }
+
+    h1 {
+      text-transform: capitalize;
+    }
+
+    p {
+      font-weight: 300;
+    }
+  }
+}
+
+.italic {
+  font-style: italic;
+}
+
+.pre-footer-block {
+  background: url("../img/footer-background.jpg") no-repeat center;
+  height: 448px;
+  display: flex;
+
+  .jason-statham {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+
+    img {
+      padding-top: 86px;
+      width: 96px;
+      height: 96px;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 20px;
+      text-align: center;
+
+      max-width: 360px;
+      padding-top: 30px;
+    }
+  }
+
+  .subscribe-form {
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1, h2 {
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-weight: 700;
+    }
+
+    h2 {
+      font-weight: 400;
+    }
+
+    .subscribe-form-email-group {
+      margin-top: 32px;
+      display: flex;
+
+      input {
+        width: 250px;
+        height: 50px;
+        font-size: 14px;
+
+        border: 0;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+
+        background: #e1e1e1;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-left: 22px;
+      }
+
+      button {
+        width: 100px;
+        font-weight: 400;
+        font-size: 14px;
+        color: white;
+        background: $pink_text;
+
+        border: 0;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+
+        padding-top: 7px;
+        padding-bottom: 7px;
+      }
+    }
+  }
+}
+
+.footer {
+  height: 80px;
+  background: $footer_black;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .social-buttons {
+    display: flex;
+    gap: 8px;
+
+    .social-button {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background: white;
     }
   }
 }
