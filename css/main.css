@@ -347,7 +347,7 @@ body {
     .pre-footer-block .subscribe-form .subscribe-form-email-group {
       margin-top: 32px;
       display: flex; }
-      .pre-footer-block .subscribe-form .subscribe-form-email-group input {
+      .pre-footer-block .subscribe-form .subscribe-form-email-group .input-email {
         width: 250px;
         height: 50px;
         font-size: 14px;
@@ -355,10 +355,8 @@ body {
         border-top-left-radius: 25px;
         border-bottom-left-radius: 25px;
         background: #e1e1e1;
-        padding-top: 7px;
-        padding-bottom: 7px;
-        padding-left: 22px; }
-      .pre-footer-block .subscribe-form .subscribe-form-email-group button {
+        padding: 7px 22px; }
+      .pre-footer-block .subscribe-form .subscribe-form-email-group .subscribe-button {
         width: 100px;
         font-weight: 400;
         font-size: 14px;
