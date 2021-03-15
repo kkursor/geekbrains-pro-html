@@ -1,11 +1,11 @@
 @charset "UTF-8";
+/** Google-шрифт Lato */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital;wght@300;400;900&display=swap");
 /* Серый цвет заголовка */
 /** Серый цвет подзаголовка */
 /** Розовый фон под мужиком */
 /** Розовый текст */
 /** Тёмно-серый цвет подвала */
-/** Google-шрифт Lato */
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital;wght@300;400;900&display=swap");
 * {
   margin: 0;
   padding: 0; }

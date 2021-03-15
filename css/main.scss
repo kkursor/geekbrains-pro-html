@@ -1,19 +1,7 @@
-/* Серый цвет заголовка */
-$header_gray:#222222;
-/** Серый цвет подзаголовка */
-$header_light_gray:#9f9f9f;
-
-/** Розовый фон под мужиком */
-$promo_pink:#F1E4E6;
-/** Розовый текст */
-$pink_text:#f16d7f;
-
-/** Тёмно-серый цвет подвала */
-$footer_black:#222224;
-
 /** Google-шрифт Lato */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital;wght@300;400;900&display=swap');
 
+@import 'vars';
 
 * {
   margin: 0;
