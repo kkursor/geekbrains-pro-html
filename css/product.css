@@ -9,10 +9,28 @@
   background-color: #f7f7f7;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  position: relative; }
   .product-block .product-block__img {
     margin-bottom: 60px;
     height: 700px; }
+  .product-block .product-block__navbutton {
+    width: 47px;
+    height: 47px;
+    position: absolute;
+    background: rgba(42, 42, 42, 0.15);
+    top: calc(50% - 23.5px);
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .product-block .product-block__navbutton svg {
+      width: 12px; }
+    .product-block .product-block__navbutton:hover svg path {
+      fill: #f16d7f; }
+  .product-block .product-block__prev {
+    left: 0; }
+  .product-block .product-block__next {
+    right: 0; }
 
 .product-description-block {
   width: 100%;

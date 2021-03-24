@@ -6,10 +6,41 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 
   .product-block__img {
     margin-bottom: 60px;
     height: 700px;
+  }
+
+  .product-block__navbutton {
+    width: 47px;
+    height: 47px;
+    position: absolute;
+    background: rgba(42, 42, 42, 0.15);
+    top: calc(50% - 23.5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 12px;
+    }
+
+    &:hover {
+      svg path {
+        fill: $pink_text;
+      }
+    }
+  }
+
+  .product-block__prev {
+    left: 0;
+
+  }
+
+  .product-block__next {
+    right: 0;
   }
 }
 
