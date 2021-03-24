@@ -137,6 +137,28 @@ body {
     width: 100%;
     background: url("../img/news-wide.jpg") center center; }
 
+.catalog-add-to-cart-link {
+  display: none;
+  position: absolute;
+  top: 188px;
+  left: 111px;
+  border: 1px solid #FFFFFF;
+  padding: 13px 15px 13px 13px;
+  color: white;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 14px; }
+  .catalog-add-to-cart-link .product-cart-icon {
+    padding-right: 12px; }
+  .catalog-add-to-cart-link:hover {
+    border: 1px solid black;
+    background: white; }
+    .catalog-add-to-cart-link:hover .product-cart-icon path {
+      fill: black; }
+    .catalog-add-to-cart-link:hover p {
+      align-self: center;
+      color: black; }
+
 .catalog-block {
   margin-top: 96px;
   font-weight: normal;
@@ -188,19 +210,6 @@ body {
         color: #f16d7f;
         font-size: 16px;
         margin: 18px 18px 20px; }
-      .catalog-block .catalog-cards .catalog-card .catalog-add-to-cart-link {
-        display: none;
-        position: absolute;
-        top: 188px;
-        left: 111px;
-        border: 1px solid #FFFFFF;
-        padding: 13px 15px 13px 13px;
-        color: white;
-        text-decoration: none;
-        font-weight: normal;
-        font-size: 14px; }
-        .catalog-block .catalog-cards .catalog-card .catalog-add-to-cart-link .product-cart-icon {
-          padding-right: 12px; }
     .catalog-block .catalog-cards .catalog-card:hover {
       position: relative; }
       .catalog-block .catalog-cards .catalog-card:hover .catalog-image {
@@ -209,14 +218,6 @@ body {
         display: flex; }
         .catalog-block .catalog-cards .catalog-card:hover .catalog-add-to-cart-link p {
           align-self: center; }
-  .catalog-block .catalog-add-to-cart-link:hover {
-    border: 1px solid black;
-    background: white; }
-    .catalog-block .catalog-add-to-cart-link:hover .product-cart-icon path {
-      fill: black; }
-    .catalog-block .catalog-add-to-cart-link:hover p {
-      align-self: center;
-      color: black; }
   .catalog-block .catalog-browse-all {
     margin-top: 48px;
     margin-bottom: 95px;
@@ -249,9 +250,17 @@ body {
       padding-bottom: 16px; }
       .catalog-block .catalog-block-header .catalog-block-header-filter .category-filter-options {
         position: absolute;
-        width: 360px;
+        top: 32px;
+        left: 0;
         z-index: 1;
-        box-sizing: border-box; }
+        box-sizing: border-box;
+        background-color: #fff;
+        padding: 16px;
+        min-width: 100%;
+        list-style-type: none; }
+        .catalog-block .catalog-block-header .catalog-block-header-filter .category-filter-options label {
+          padding-left: 8px;
+          color: #6F6E6E; }
       .catalog-block .catalog-block-header .catalog-block-header-filter path {
         fill: black; }
       .catalog-block .catalog-block-header .catalog-block-header-filter svg {
