@@ -104,4 +104,51 @@
     gap: 40px;
     height: 143px;
   }
+
+  // catalog.html
+  .catalog-header-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+  }
+
+  .catalog-block, .catalog-cards {
+    margin-top: 0 !important;
+  }
+
+  .catalog-block-filter-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .catalog-block-header-filter {
+    padding-left: 0 !important;
+
+    summary {
+      white-space: nowrap;
+
+      p {
+        display: none;
+      }
+
+      svg {
+        width: 38px;
+      }
+    }
+  }
+
+  .catalog-block-filter-right {
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .catalog-block-paginator-block {
+    max-width: 283px;
+    gap: 17px;
+    margin-top: 40px !important;
+    margin-bottom: 64px !important;
+  }
 }
