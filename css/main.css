@@ -230,6 +230,9 @@ body {
   .catalog-block h2 {
     color: #9f9f9f;
     font-size: 14px; }
+  .catalog-block .catalog-block-filter-right {
+    display: flex;
+    flex-direction: row; }
   .catalog-block .catalog-cards {
     display: flex;
     justify-content: center;
@@ -767,7 +770,20 @@ summary {
 
   .footer {
     box-sizing: border-box;
-    padding: 32px; } }
+    padding: 32px; }
+
+  .catalog-header-block {
+    padding: 16px; }
+
+  .catalog-block {
+    margin-top: 0; }
+    .catalog-block .catalog-block-header {
+      margin-top: 24px;
+      margin-bottom: 24px;
+      justify-content: space-between; }
+    .catalog-block .catalog-cards {
+      margin-top: 0;
+      gap: 16px; } }
 @media (max-width: 475px) {
   .header {
     padding: 16px;

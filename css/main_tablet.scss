@@ -104,4 +104,24 @@
     box-sizing: border-box;
     padding: 32px;
   }
+
+  // catalog.html
+  .catalog-header-block {
+    padding: 16px;
+  }
+
+  .catalog-block {
+    margin-top: 0;
+
+    .catalog-block-header {
+      margin-top: 24px;
+      margin-bottom: 24px;
+      justify-content: space-between;
+    }
+
+    .catalog-cards {
+      margin-top: 0;
+      gap: 16px;
+    }
+  }
 }

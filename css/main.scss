@@ -334,6 +334,11 @@ body {
     font-size: 14px;
   }
 
+  .catalog-block-filter-right {
+    display: flex;
+    flex-direction: row;
+  }
+
   .catalog-cards {
     display: flex;
     justify-content: center;
