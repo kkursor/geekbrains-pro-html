@@ -40,8 +40,11 @@ body {
     align-items: center; }
     .header .main_menu .main_menu_left_buttons a {
       margin-right: 41px; }
-    .header .main_menu .main_menu_right_buttons .main-menu-spacing {
-      margin-left: 33px; }
+    .header .main_menu .main_menu_right_buttons {
+      display: flex;
+      align-items: center; }
+      .header .main_menu .main_menu_right_buttons .main-menu-spacing {
+        margin-left: 33px; }
 
 .notifiable {
   position: relative;
@@ -229,6 +232,7 @@ body {
     font-size: 14px; }
   .catalog-block .catalog-cards {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 30px; }
     .catalog-block .catalog-cards .catalog-cards-margin-top {
@@ -693,7 +697,7 @@ summary {
 .colored-text {
   color: #f16d7f; }
 
-@media (min-width: 300px) and (max-width: 769px) {
+@media (min-width: 476px) and (max-width: 769px) {
   .header {
     padding-left: 32px;
     padding-right: 32px;
@@ -737,8 +741,8 @@ summary {
       font-weight: 400;
       font-size: 30px; }
     .catalog-block .catalog-cards {
-      margin-top: 74px; }
-
+      margin-top: 74px; } }
+@media (max-width: 1024px) {
   .warranties {
     flex-direction: column;
     align-items: center;
@@ -764,5 +768,77 @@ summary {
   .footer {
     box-sizing: border-box;
     padding: 32px; } }
+@media (max-width: 475px) {
+  .header {
+    padding: 16px;
+    box-sizing: border-box; }
+
+  .main-menu-block {
+    width: 75vw;
+    right: -100vw; }
+
+  .no-mobile {
+    display: none; }
+
+  .promo {
+    min-height: 363px; }
+    .promo .promo_image {
+      display: none; }
+    .promo .promo_block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-height: 363px;
+      width: 100%; }
+      .promo .promo_block .promo_text {
+        margin-top: 0;
+        max-width: 236px; }
+      .promo .promo_block .promo_header {
+        font-weight: 900;
+        font-size: 38px; }
+      .promo .promo_block .promo_description {
+        font-weight: 700;
+        font-size: 20px; }
+
+  .news-block {
+    padding-left: 16px;
+    padding-right: 16px;
+    display: flex;
+    flex-direction: column; }
+    .news-block .news-row-1 {
+      flex-direction: column;
+      height: 100%; }
+    .news-block .news {
+      min-height: 247px; }
+    .news-block .news-row-2 {
+      min-height: 111px;
+      height: 111px; }
+
+  .catalog-block {
+    margin-top: 64px; }
+    .catalog-block .catalog-cards {
+      margin-top: 64px; }
+
+  .pre-footer-block {
+    gap: 59px;
+    height: 550px; }
+    .pre-footer-block .jason-statham p {
+      font-size: 18px;
+      width: 343px; }
+    .pre-footer-block .subscribe-form {
+      padding-top: 0 !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .pre-footer-block .subscribe-form h2 {
+        text-align: center; }
+
+  .footer {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 40px;
+    height: 143px; } }
 
 /*# sourceMappingURL=main.css.map */

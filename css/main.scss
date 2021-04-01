@@ -51,6 +51,9 @@ body {
     }
 
     .main_menu_right_buttons {
+      display: flex;
+      align-items: center;
+
       .main-menu-spacing {
         margin-left: 33px;
       }
@@ -333,6 +336,7 @@ body {
 
   .catalog-cards {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
 
