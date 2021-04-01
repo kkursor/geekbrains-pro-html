@@ -1022,3 +1022,6 @@ summary {
 .colored-text {
   color: $pink_text;
 }
+
+@import "main_tablet";
+@import "main_mobile";

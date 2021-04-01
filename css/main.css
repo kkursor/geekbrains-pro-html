@@ -693,4 +693,76 @@ summary {
 .colored-text {
   color: #f16d7f; }
 
+@media (min-width: 300px) and (max-width: 769px) {
+  .header {
+    padding-left: 32px;
+    padding-right: 32px;
+    box-sizing: border-box; }
+
+  .promo {
+    min-height: 368px;
+    height: 368px; }
+    .promo .promo_image {
+      width: 40%;
+      display: flex;
+      justify-content: center; }
+    .promo .promo_block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .promo .promo_block .promo_text {
+        margin-top: 0; }
+      .promo .promo_block .promo_header {
+        font-size: 44px;
+        font-weight: 900; }
+      .promo .promo_block .promo_description {
+        font-size: 24px;
+        font-weight: 700; }
+
+  .news-block {
+    margin-top: 0;
+    padding: 18px;
+    gap: 18px; }
+    .news-block .news {
+      background-size: cover !important; }
+    .news-block .news-row-1 {
+      gap: 18px;
+      max-height: 168px; }
+    .news-block .news-row-2 {
+      max-height: 116px; }
+
+  .catalog-block {
+    margin-top: 155px; }
+    .catalog-block h1 {
+      font-weight: 400;
+      font-size: 30px; }
+    .catalog-block .catalog-cards {
+      margin-top: 74px; }
+
+  .warranties {
+    flex-direction: column;
+    align-items: center;
+    min-height: 610px;
+    padding-top: 64px;
+    padding-bottom: 64px; }
+    .warranties .warranty {
+      max-width: 360px;
+      color: #fbfbfb; }
+      .warranties .warranty h1 {
+        font-weight: 400;
+        font-size: 20px; }
+      .warranties .warranty p {
+        text-align: center; }
+
+  .pre-footer-block {
+    flex-direction: column;
+    align-items: center;
+    min-height: 693px;
+    background-size: auto 100%;
+    background-position-x: -425px; }
+
+  .footer {
+    box-sizing: border-box;
+    padding: 32px; } }
+
 /*# sourceMappingURL=main.css.map */

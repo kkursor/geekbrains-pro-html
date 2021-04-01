@@ -1,0 +1,105 @@
+@media (min-width: 300px) and (max-width: 769px) {
+  .header {
+    padding-left: 32px;
+    padding-right: 32px;
+    box-sizing: border-box;
+  }
+
+  .promo {
+    min-height: 368px;
+    height: 368px;
+
+    .promo_image {
+      width: 40%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .promo_block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .promo_text {
+        margin-top: 0;
+      }
+
+      .promo_header {
+        font-size: 44px;
+        font-weight: 900;
+      }
+
+      .promo_description {
+        font-size: 24px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .news-block {
+    margin-top: 0;
+    padding: 18px;
+    gap: 18px;
+
+    .news {
+      background-size: cover !important;
+    }
+
+    .news-row-1 {
+      gap: 18px;
+      max-height: 168px;
+    }
+
+    .news-row-2 {
+      max-height: 116px;
+    }
+  }
+
+  .catalog-block {
+    margin-top: 155px;
+
+    h1 {
+      font-weight: 400;
+      font-size: 30px;
+    }
+
+    .catalog-cards {
+      margin-top: 74px;
+    }
+  }
+
+  .warranties {
+    flex-direction: column;
+    align-items: center;
+    min-height: 610px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+
+    .warranty {
+      max-width: 360px;
+      color: #fbfbfb;
+
+      h1 {
+        font-weight: 400;
+        font-size: 20px;
+      }
+
+      p {
+        text-align: center;
+      }
+    }
+  }
+
+  .pre-footer-block {
+    flex-direction: column;
+    align-items: center;
+    min-height: 693px;
+    background-size: auto 100%;
+    background-position-x: -425px;
+  }
+
+  .footer {
+    box-sizing: border-box;
+    padding: 32px;
+  }
+}
