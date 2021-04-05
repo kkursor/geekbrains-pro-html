@@ -10,6 +10,10 @@
   margin: 0;
   padding: 0; }
 
+.box {
+  position: relative;
+  overflow: hidden; }
+
 a {
   text-decoration: none; }
 
@@ -25,39 +29,93 @@ body {
   background: #222222;
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  position: relative; }
   .header .main_menu {
     max-width: 1100px;
+    overflow: hidden;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    position: relative; }
+    align-items: center; }
     .header .main_menu .main_menu_left_buttons a {
       margin-right: 41px; }
-    .header .main_menu .main_menu_right_buttons a {
-      margin-left: 33px; }
-    .header .main_menu .main_menu_right_buttons .event_notification {
-      background: #f16d7f;
-      border-radius: 50%;
-      color: white;
-      position: absolute;
-      top: 0;
-      right: -8px;
-      width: 16px;
-      height: 16px;
-      text-align: center;
-      font-size: 12px; }
+    .header .main_menu .main_menu_right_buttons {
+      display: flex;
+      align-items: center; }
+      .header .main_menu .main_menu_right_buttons .main-menu-spacing {
+        margin-left: 33px; }
+
+.notifiable {
+  position: relative;
+  width: 32px;
+  display: inline-block;
+  margin-left: 32px;
+  margin-right: 16px; }
+  .notifiable a {
+    margin-left: 0px; }
+
+.event_notification {
+  background: #f16d7f;
+  border-radius: 50%;
+  color: white;
+  position: absolute;
+  top: 0;
+  right: -5px;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  font-size: 12px; }
+
+.main-menu-block {
+  background: white;
+  position: absolute;
+  right: -250px;
+  top: 75px;
+  transition: right 1s;
+  padding: 35px;
+  height: 768px;
+  box-sizing: border-box;
+  -webkit-box-shadow: -18px 10px 36px 0px #b3b3b3;
+  -moz-box-shadow: -18px 10px 36px 0px #b3b3b3;
+  box-shadow: -18px 10px 36px 0px #b3b3b3; }
+  .main-menu-block, .main-menu-block .main-menu-entries {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; }
+  .main-menu-block .main-menu-category {
+    font-weight: 400;
+    font-size: 14px;
+    color: #f16d7f;
+    text-transform: uppercase; }
+  .main-menu-block .main-menu-entries {
+    list-style-type: none; }
+    .main-menu-block .main-menu-entries li, .main-menu-block .main-menu-entries a {
+      margin-left: 20px;
+      color: #6F6E6E; }
+  .main-menu-block .main-menu-header {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px; }
+  .main-menu-block .main-menu-close {
+    position: absolute;
+    right: 16px;
+    top: 16px; }
+
+#menu-toggle {
+  display: none; }
+  #menu-toggle:checked ~ nav {
+    right: 0; }
 
 .promo {
   background: #F1E4E6;
   display: flex;
   flex-direction: row;
-  font-weight: 900; }
+  font-weight: 900;
+  min-height: 768px; }
   .promo .promo_image {
     width: 50%; }
     .promo .promo_image img {
-      width: 100%;
       height: 100%; }
   .promo .promo_block .promo_text {
     /** розовая вертикальная линия */
@@ -172,8 +230,12 @@ body {
   .catalog-block h2 {
     color: #9f9f9f;
     font-size: 14px; }
+  .catalog-block .catalog-block-filter-right {
+    display: flex;
+    flex-direction: row; }
   .catalog-block .catalog-cards {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 30px; }
     .catalog-block .catalog-cards .catalog-cards-margin-top {
@@ -637,5 +699,195 @@ summary {
 
 .colored-text {
   color: #f16d7f; }
+
+@media (min-width: 476px) and (max-width: 769px) {
+  .header {
+    padding-left: 32px;
+    padding-right: 32px;
+    box-sizing: border-box; }
+
+  .promo {
+    min-height: 368px;
+    height: 368px; }
+    .promo .promo_image {
+      width: 40%;
+      display: flex;
+      justify-content: center; }
+    .promo .promo_block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .promo .promo_block .promo_text {
+        margin-top: 0; }
+      .promo .promo_block .promo_header {
+        font-size: 44px;
+        font-weight: 900; }
+      .promo .promo_block .promo_description {
+        font-size: 24px;
+        font-weight: 700; }
+
+  .news-block {
+    margin-top: 0;
+    padding: 18px;
+    gap: 18px; }
+    .news-block .news {
+      background-size: cover !important; }
+    .news-block .news-row-1 {
+      gap: 18px;
+      max-height: 168px; }
+    .news-block .news-row-2 {
+      max-height: 116px; }
+
+  .catalog-block {
+    margin-top: 155px; }
+    .catalog-block h1 {
+      font-weight: 400;
+      font-size: 30px; }
+    .catalog-block .catalog-cards {
+      margin-top: 74px; } }
+@media (max-width: 1024px) {
+  .warranties {
+    flex-direction: column;
+    align-items: center;
+    min-height: 610px;
+    padding-top: 64px;
+    padding-bottom: 64px; }
+    .warranties .warranty {
+      max-width: 360px;
+      color: #fbfbfb; }
+      .warranties .warranty h1 {
+        font-weight: 400;
+        font-size: 20px; }
+      .warranties .warranty p {
+        text-align: center; }
+
+  .pre-footer-block {
+    flex-direction: column;
+    align-items: center;
+    min-height: 693px;
+    background-size: auto 100%;
+    background-position-x: -425px; }
+
+  .footer {
+    box-sizing: border-box;
+    padding: 32px; }
+
+  .catalog-header-block {
+    padding: 16px; }
+
+  .catalog-block {
+    margin-top: 0; }
+    .catalog-block .catalog-block-header {
+      margin-top: 24px;
+      margin-bottom: 24px;
+      justify-content: space-between; }
+    .catalog-block .catalog-cards {
+      margin-top: 0;
+      gap: 16px; } }
+@media (max-width: 475px) {
+  .header {
+    padding: 16px;
+    box-sizing: border-box; }
+
+  .main-menu-block {
+    width: 75vw;
+    right: -100vw; }
+
+  .no-mobile {
+    display: none; }
+
+  .promo {
+    min-height: 363px; }
+    .promo .promo_image {
+      display: none; }
+    .promo .promo_block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-height: 363px;
+      width: 100%; }
+      .promo .promo_block .promo_text {
+        margin-top: 0;
+        max-width: 236px; }
+      .promo .promo_block .promo_header {
+        font-weight: 900;
+        font-size: 38px; }
+      .promo .promo_block .promo_description {
+        font-weight: 700;
+        font-size: 20px; }
+
+  .news-block {
+    padding-left: 16px;
+    padding-right: 16px;
+    display: flex;
+    flex-direction: column; }
+    .news-block .news-row-1 {
+      flex-direction: column;
+      height: 100%; }
+    .news-block .news {
+      min-height: 247px; }
+    .news-block .news-row-2 {
+      min-height: 111px;
+      height: 111px; }
+
+  .catalog-block {
+    margin-top: 64px; }
+    .catalog-block .catalog-cards {
+      margin-top: 64px; }
+
+  .pre-footer-block {
+    gap: 59px;
+    height: 550px; }
+    .pre-footer-block .jason-statham p {
+      font-size: 18px;
+      width: 343px; }
+    .pre-footer-block .subscribe-form {
+      padding-top: 0 !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .pre-footer-block .subscribe-form h2 {
+        text-align: center; }
+
+  .footer {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 40px;
+    height: 143px; }
+
+  .catalog-header-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; }
+
+  .catalog-block, .catalog-cards {
+    margin-top: 0 !important; }
+
+  .catalog-block-filter-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+
+  .catalog-block-header-filter {
+    padding-left: 0 !important; }
+    .catalog-block-header-filter summary {
+      white-space: nowrap; }
+      .catalog-block-header-filter summary p {
+        display: none; }
+      .catalog-block-header-filter summary svg {
+        width: 38px; }
+
+  .catalog-block-filter-right {
+    font-size: 12px;
+    font-weight: 400; }
+
+  .catalog-block-paginator-block {
+    max-width: 283px;
+    gap: 17px;
+    margin-top: 40px !important;
+    margin-bottom: 64px !important; } }
 
 /*# sourceMappingURL=main.css.map */

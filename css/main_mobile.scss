@@ -1,0 +1,154 @@
+@media (max-width: 475px) {
+  .header {
+    padding: 16px;
+    box-sizing: border-box;
+  }
+
+  .main-menu-block {
+    width: 75vw;
+    right: -100vw;
+  }
+
+  .no-mobile {
+    display: none;
+  }
+
+  .promo {
+    min-height: 363px;
+
+    .promo_image {
+      display: none;
+    }
+
+    .promo_block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-height: 363px;
+      width: 100%;
+
+      .promo_text {
+        margin-top: 0;
+        max-width: 236px;
+      }
+
+      .promo_header {
+        font-weight: 900;
+        font-size: 38px;
+      }
+
+      .promo_description {
+        font-weight: 700;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .news-block {
+    padding-left: 16px;
+    padding-right: 16px;
+    display: flex;
+    flex-direction: column;
+
+    .news-row-1 {
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .news {
+      min-height: 247px;
+    }
+
+    .news-row-2 {
+      min-height: 111px;
+      height: 111px;
+    }
+  }
+
+  .catalog-block {
+    margin-top: 64px;
+
+    .catalog-cards {
+      margin-top: 64px;
+    }
+  }
+
+  .pre-footer-block {
+    gap: 59px;
+    height: 550px;
+
+    .jason-statham {
+      p {
+        font-size: 18px;
+        width: 343px;
+      }
+    }
+
+    .subscribe-form {
+      padding-top: 0 !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h2 {
+        text-align: center;
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 40px;
+    height: 143px;
+  }
+
+  // catalog.html
+  .catalog-header-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+  }
+
+  .catalog-block, .catalog-cards {
+    margin-top: 0 !important;
+  }
+
+  .catalog-block-filter-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .catalog-block-header-filter {
+    padding-left: 0 !important;
+
+    summary {
+      white-space: nowrap;
+
+      p {
+        display: none;
+      }
+
+      svg {
+        width: 38px;
+      }
+    }
+  }
+
+  .catalog-block-filter-right {
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .catalog-block-paginator-block {
+    max-width: 283px;
+    gap: 17px;
+    margin-top: 40px !important;
+    margin-bottom: 64px !important;
+  }
+}
