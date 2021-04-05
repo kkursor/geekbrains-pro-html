@@ -870,10 +870,14 @@ body {
 }
 
 summary {
-  display: block;
+  display: flex;
 
   &::-webkit-details-marker {
     display: none;
+  }
+
+  svg {
+    min-width: 15px;
   }
 }
 

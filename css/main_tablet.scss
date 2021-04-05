@@ -124,4 +124,49 @@
       gap: 16px;
     }
   }
+
+  .cart-block {
+    flex-direction: column;
+
+    .cart-content {
+      padding: 16px;
+    }
+
+    .cart-actions {
+      justify-content: center !important;
+      gap: 48px;
+    }
+  }
+
+  .cart-contacts {
+    margin-left: 16px !important;
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+
+    .cart-summary {
+      flex-grow: 1;
+      margin-top: 43px !important;
+    }
+
+    margin-bottom: 140px;
+  }
+
+  .registration-block {
+    margin-left: 16px;
+    margin-right: 16px;
+    gap: 22px;
+
+    .registration-block-form, .registration-block-description {
+      h3, p, li {
+        font-size: 16px !important;
+      }
+
+      li {
+        width: calc(50vw - 64px);
+      }
+
+      max-width: 50vw;
+    }
+  }
 }
