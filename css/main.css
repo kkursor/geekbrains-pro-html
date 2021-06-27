@@ -33,7 +33,7 @@ body {
   position: relative; }
   .header .main_menu {
     max-width: 1100px;
-    overflow: hidden;
+    #overflow: hidden;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -701,6 +701,16 @@ summary {
 
 .colored-text {
   color: #f16d7f; }
+
+.main_menu--cart {
+  display: none; }
+
+#menu-cart-toggle:checked ~ .main_menu--cart {
+  display: flex;
+  background: white;
+  height: 640px;
+  width: 320px;
+  position: absolute; }
 
 @media (min-width: 476px) and (max-width: 769px) {
   .header {
