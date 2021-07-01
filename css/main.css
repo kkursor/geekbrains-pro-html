@@ -703,14 +703,43 @@ summary {
   color: #f16d7f; }
 
 .main_menu--cart {
-  display: none; }
+  display: none;
+  margin: 10px; }
 
 #menu-cart-toggle:checked ~ .main_menu--cart {
   display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 5px;
   background: white;
   height: 640px;
   width: 320px;
   position: absolute; }
+
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: stretch; }
+  .cart-list li {
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    gap: 5px;
+    border: 1px black solid;
+    border-radius: 20px; }
+    .cart-list li .good-data {
+      display: flex;
+      gap: 5px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center; }
+    .cart-list li button {
+      min-width: 32px;
+      min-height: 32px; }
 
 @media (min-width: 476px) and (max-width: 769px) {
   .header {
