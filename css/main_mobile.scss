@@ -94,6 +94,10 @@
       h2 {
         text-align: center;
       }
+
+      .input-email {
+        width: 200px !important;
+      }
     }
   }
 
@@ -146,9 +150,96 @@
   }
 
   .catalog-block-paginator-block {
-    max-width: 283px;
-    gap: 17px;
+    gap: 10px;
     margin-top: 40px !important;
     margin-bottom: 64px !important;
+  }
+
+  .cart-block {
+    flex-direction: column;
+
+    .cart-product-image {
+      width: 144px;
+    }
+
+    .cart-product-title {
+      max-width: 144px;
+      font-size: 16px !important;
+      margin-bottom: 26px !important;
+    }
+
+    .cart-product-details {
+      margin-top: 13px !important;
+      margin-left: 16px !important;
+      margin-right: 16px !important;
+      width: 100%;
+      gap: 4px;
+    }
+
+    .cart-details {
+      h3,p {
+        font-size: 14px !important;
+      }
+    }
+
+    .cart-delete {
+      svg {
+        width: 12px;
+        height: 12px;
+      }
+    }
+
+    .cart-content {
+      padding: 16px;
+    }
+
+    .cart-actions {
+      justify-content: center !important;
+      gap: 48px;
+    }
+  }
+
+  .cart-contacts {
+    margin-left: 16px !important;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: space-between;
+
+    .cart-input-address {
+      width: calc(90vw - 32px) !important;
+    }
+
+    .cart-summary {
+      flex-grow: 1;
+      margin-top: 43px !important;
+      max-width: 90vw;
+    }
+
+    margin-bottom: 140px;
+  }
+
+
+  .registration-block {
+    margin-left: 16px;
+    margin-right: 16px;
+    gap: 40px;
+    flex-direction: column;
+
+    .registration-block-form, .registration-block-description {
+      h3, p, li {
+        font-size: 16px !important;
+      }
+
+      li {
+        width: 100vw !important;
+      }
+
+      max-width: calc(100vw - 32px);
+    }
+  }
+
+  .register-input {
+    width: auto !important;
   }
 }

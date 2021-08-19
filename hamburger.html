@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+Размер гамбургера:<br>
+<input type="radio" name="size" value="small">маленький<br>
+<input type="radio" name="size" value="big">большой<br>
+	<br>
+Начинки:<br>
+<input type="radio" name="filling" value="cheese">сыр<br>
+<input type="radio" name="filling" value="salad">салат<br>
+<input type="radio" name="filling" value="potato">картофель<br>
+	<br>
+Дополнительно:<br>
+<input type="checkbox" name="spicing">Приправа<br>
+<input type="checkbox" name="mayonnaise">Майонез<br>
+
+<div id="result"></div>
+
+<button onclick="calculate()">Рассчитать</button>
+
+<script>
+	'use strict';
+
+	class Hamburger {
+        constructor(size, filling) {
+            const sizeSelector = document.querySelector(size+":checked");
+			const fillingSelector = document.querySelector(filling+":checked");
+
+            if (null === sizeSelector || null === fillingSelector) {
+                throw new Error("Не выбран размер или начинка!");
+            }
+
+            this.size = sizeSelector.value;
+            this.filling = fillingSelector.value;
+		}
+
+        checkSpicing() {
+            if (document.querySelector("input[name='spicing']").checked) {
+                return true;
+            }
+
+            return false;
+        }
+
+        checkMayonnaise() {
+        	if (document.querySelector("input[name='mayonnaise']").checked) {
+                return true;
+            }
+
+        	return false;
+        }
+
+        getPrice() {
+            let price = 0;
+
+            if ("small" === this.size) {
+                price += 50;
+            } else if ("big" === this.size) {
+                price += 100;
+            }
+
+            switch (this.filling) {
+                case "cheese": price += 10; break;
+                case "salad": price += 20; break;
+                case "potato": price += 15; break;
+			}
+
+            if (this.checkSpicing()) {
+                price += 15;
+			}
+
+            if (this.checkMayonnaise()) {
+                price += 20;
+            }
+
+            return price;
+        }
+
+        getCalories() {
+            let calories = 0;
+
+            if ("small" === this.size) {
+                calories += 20;
+            } else if ("big" === this.size) {
+                calories += 40;
+            }
+
+            switch (this.filling) {
+                case "cheese": calories += 20; break;
+                case "salad": calories += 5; break;
+                case "potato": calories += 10; break;
+            }
+
+            if (this.checkMayonnaise()) {
+                calories += 5;
+            }
+
+            return calories;
+        }
+    }
+
+    function calculate() {
+	    try {
+            let ham = new Hamburger("input[name=size]", "input[name=filling]");
+            document.querySelector("#result").innerHTML = `Цена ${ham.getPrice()}, калорийность ${ham.getCalories()}`;
+        }
+        catch (e) {
+            document.querySelector("#result").innerHTML = e.message;
+		}
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+
+	<style>
+		.error {
+			border: 1px red solid;
+		}
+
+		.error-description {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		Имя<br>
+		<input type="text" name="name" placeholder="Иван" data-regex="^[а-яёa-z]+$"><br>
+		Телефон<br>
+		<input type="text" name="phone" placeholder="+7(000)000-0000" data-regex="\+\d+\(\d{3}\)\d{3}-\d{4}"><br>
+		E-mail<br>
+		<input type="text" name="email" placeholder="mymail@mail.ru" data-regex="[a-z\.\-]+@[a-z\.\-]+.[a-z\.\-]+"><br>
+		Текст<br>
+		<input type="text" name="text" data-regex=".+"><br>
+	</form>
+	<button onclick="validate()">Отправить</button><br>
+<script>
+	'use strict';
+
+	const text = "He said 'I'll never forget you.' It was the best moment of my life. He said 'I'll never forget you.' It was the best moment of my life. He said 'I'll never forget you.' It was the best moment of my life.";
+
+    // 1. Дан большой текст, в котором для оформления прямой речи используются одинарные кавычки. Придумать шаблон, который заменяет одинарные кавычки на двойные.
+	let rx1 = new RegExp("'", "gmi");
+	console.log(text.replace(rx1, "\""));
+
+    // 2. Улучшить шаблон так, чтобы в конструкциях типа aren't одинарная кавычка не заменялась на двойную.
+	let rx2 = new RegExp("(?<beforespace>\\s\')|(?<afterspace>'\\s)", "gmi");
+    console.log(text.replace(rx2, (match, p1, p2) => {
+		if (undefined === p1) {
+		    return "\" ";
+		} else if (undefined === p2) {
+		    return " \"";
+		}
+    }));
+
+    /* 3. *Создать форму обратной связи с полями: Имя, Телефон, E-mail, текст, кнопка Отправить. При нажатии на кнопку Отправить произвести валидацию полей следующим образом:
+        a. Имя содержит только буквы.
+        b. Телефон имеет вид +7(000)000-0000.
+        c. E-mail имеет вид mymail@mail.ru, или my.mail@mail.ru, или my-mail@mail.ru.
+        d. Текст произвольный.
+        e. Если одно из полей не прошло валидацию, необходимо выделить это поле красной рамкой и сообщить пользователю об ошибке.*/
+	function validate() {
+	    document.querySelectorAll(".error-description").forEach(element => element.remove());
+        document.querySelectorAll(".error").forEach(element => element.classList.remove("error"));
+
+	    document.querySelectorAll("input").forEach(element => {
+	        let rx = new RegExp(element.dataset.regex, "gmi");
+
+	        if (!element.value.match(rx)) {
+	            let errorElement = document.createElement("div");
+	            errorElement.classList.add("error-description");
+	            errorElement.innerText = "Неверно заполнен элемент формы!";
+	            element.insertAdjacentElement("afterend", errorElement);
+	            element.classList.add("error");
+			}
+		});
+
+	    if (null === document.querySelector(".error")) {
+	        alert("Все поля заполнены корректно!");
+		}
+	}
+</script>
+</body>
+</html>
